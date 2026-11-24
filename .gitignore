@@ -1,0 +1,94 @@
+# Router project .gitignore — local-only branches, no secrets in history.
+# Keeps source, specs, proofs, required fixtures, lockfiles, and repro configs tracked.
+
+# --- Rust / Cargo ---
+/target/
+**/target/
+**/*.rs.bk
+*.pdb
+# NOTE: Cargo.lock is intentionally NOT ignored (reproducible builds).
+
+# --- Verus / solver artifacts (local caches and logs only) ---
+.verus/
+**/.verus-cache/
+*.verus.log
+verus-debug/
+*.smt2
+*.smt2.log
+z3*.log
+
+# --- Build outputs ---
+/dist/
+*.d
+*.rlib
+*.rmeta
+
+# --- TQUIC / QUIC local run outputs (required fixtures stay tracked) ---
+*.log
+logs/
+qlog/
+*.qlog
+
+# --- Fuzzing (keep committed seeds/corpus; ignore live outputs) ---
+fuzz/target/
+fuzz/artifacts/
+fuzz/corpus/crashes/
+fuzz/corpus/queue/
+**/afl-out/
+
+# --- Benchmarks (keep committed reports; ignore live criterion state) ---
+# criterion writes under target/ (already ignored); ignore ad-hoc local runs:
+benchmark-results-local/
+*.prof
+*.profraw
+perf.data
+perf.data.old
+flamegraph.svg
+
+# --- Test / coverage local outputs ---
+lcov.info
+*.profdata
+tarpaulin-report.html
+coverage/
+
+# --- Linux / temp / editors ---
+*~
+*.tmp
+*.bak
+*.swp
+*.swo
+.nfs*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+*.iml
+.direnv/
+.envrc.local
+
+# --- Secrets and local environment (never commit) ---
+.env
+.env.*
+!.env.example
+secrets/
+*.secret
+*.key
+*.pem
+*.p12
+*.pfx
+id_*_rsa
+!tests/fixtures/**
+
+# --- Node / tooling sidecars (if docs tooling appears) ---
+node_modules/
+
+# --- Explicitly keep required inputs even if a rule above is broad ---
+!Cargo.lock
+!rust-toolchain.toml
+!docs/**
+!src/**
+!specs/**
+!proofs/**
+!tests/fixtures/**
+!benches/**

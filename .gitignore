@@ -98,3 +98,6 @@ node_modules/
 
 # Phase 0 tool downloads and local demo certificates.
 /.phase0-tools/
+
+# Local CommandCode session state: generated permission settings and personal taste notes.
+/.commandcode/

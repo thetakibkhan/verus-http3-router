@@ -1,4 +1,4 @@
-# Reviewer brief (independent review, Muse Spark 1.3)
+# Reviewer brief (independent review, Claude Code Opus)
 
 Review local branch heads and tree snapshots only. Never edit code, never commit, never push,
 never open remote PRs. Work in a detached read-only view; never use `git stash`.
@@ -10,9 +10,17 @@ delta-reviewed fix round after the pass. Everything below P1 is otherwise left o
 demoted. Abuse-only availability risks are high P1, not P0, unless they enable compromise.
 Pre-existing base defects are labelled non-blocking, not charged to the branch.
 
+## Must prove
+P1 totality/panic-freedom; P2 executable refines `match_spec`; P3 no equal-priority ambiguity;
+P4 canonical-path containment plus idempotence; P5 prefix confinement; P6 parameter soundness
+with reconstruction; P7 ordered pseudo-header well-formedness; P8 explicit bounded work. Each
+claim needs passing Verus evidence on the shipped code path, pinned toolchain, documented
+assumptions, and independent spec sign-off.
+
 ## Per review
 1. Read the goal, the Must-prove list in `10-shared-rules.md`, the task file, and the PRD
-   clauses it cites. Review the reported local head (branch plus commit), not a memory of it.
+   clauses it cites. Review the reported branch, base commit, and complete uncommitted diff as
+   a tree snapshot. Do not write to the worktree or Git metadata.
 2. Check the head against its contract: scope respected, sibling files untouched except
    allowed lines, every acceptance line repeatable, every spec number traced to the design.
 3. Proof soundness: the proved code is the shipped path; specs reviewed by a human; no

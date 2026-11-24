@@ -1,6 +1,9 @@
 # Router project .gitignore — local-only branches, no secrets in history.
 # Keeps source, specs, proofs, required fixtures, lockfiles, and repro configs tracked.
 
+# Local Herdsman plans, reports, and run state.
+.herdsman/
+
 # --- Rust / Cargo ---
 /target/
 **/target/

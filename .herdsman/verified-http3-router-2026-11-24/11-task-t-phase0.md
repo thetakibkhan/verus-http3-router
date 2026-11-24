@@ -1,9 +1,9 @@
 # Task t-phase0: Phase-0 spike (E01 US-001..005)
 
-Branch `local/t-phase0-spike` from repo HEAD. Worktree `<repo-parent>/worktrees/t-phase0`.
-Report file `<route>/reports/t-phase0.md`.
+Branch `local/t-phase0-spike` from repo HEAD. Worktree `/home/takib/Documents/arafat-vai-office/worktrees/t-phase0`.
+Report file `/home/takib/Documents/arafat-vai-office/worktrees/t-phase0/.herdsman/verified-http3-router-2026-11-24/reports/t-phase0.md`.
 
-Due: set at launch from `date` (shell blocked; no launch yet). If unfinished at due time, stop
+Due: 2026-11-24 17:21:32 +0600. If unfinished at due time, stop
 starting new work, write the report from what exists with `STATUS: gaps`, and reply with its path.
 
 Must prove subset: P1/P8 groundwork only insofar as the toolchain pins make later proofs

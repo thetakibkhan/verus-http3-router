@@ -1,8 +1,10 @@
-# Trusted computing base (TCB) — skeleton, Phase-1 draft
+# Trusted computing base (TCB) — skeleton, Phase 0 baseline
 
-Status: draft. No code exists yet, so the exemption tables are empty by construction, not by
-audit. Every `external_body`, `assume_specification`, and explicit `assume` added later must
-be recorded here with rationale, owner, and review record, or CI fails the change.
+Status: draft. Phase 0 contains only workspace scaffolds, a standalone Verus smoke proof, and a
+loopback TQUIC header demo; no kernel logic or P1–P8 proof exists yet. The exemption tables are
+empty because no trusted declaration has been added, not because an audit has passed. Every
+`external_body`, `assume_specification`, and explicit `assume` added later must be recorded here
+with rationale, owner, and review record, or CI fails the change.
 
 ## Trusted components (unverified by this project)
 - TQUIC, including QUIC, TLS, QPACK decoding, and HTTP/3 stream handling (Ivy-tested, not
@@ -15,10 +17,11 @@ be recorded here with rationale, owner, and review record, or CI fails the chang
 
 ## Verified boundary
 - Synchronous kernel only: K1 header validation, K2 canonicalization, K3 table validation,
-  K4 linear matching. Proofs cover P1–P8 on the shipped code path under documented
-  assumptions. No full-server verification is claimed.
+  K4 linear matching. In V1, proofs are to cover P1–P8 on the shipped code path under
+  documented assumptions. No full-server verification is claimed, and Phase 0 makes no
+  P1–P8 claim.
 
-## Proof exemptions (none yet — code does not exist)
+## Proof exemptions (none yet — no trusted declarations added)
 | Location | Kind | Rationale | Owner | Review |
 |---|---|---|---|---|
 | — | — | — | — | — |
@@ -30,4 +33,5 @@ The count below is a tripwire, not evidence: exemptions: 0, all recorded: yes (v
 ## Assumptions log
 | Date | Assumption | Scope | Status |
 |---|---|---|---|
-| 2026-11-24 | Shell blocked; no build, test, or Verus run performed or claimed | whole route | open |
+| 2026-11-24 | Launch-time shell constraint; no build/test/Verus claim at that moment | whole route | superseded by the Phase 0 evidence in `.herdsman/verified-http3-router-2026-11-24/reports/t-phase0.md` |
+| 2026-11-24 | Phase 0 local checks ran with repo-pinned tools; hosted CI and an independent clean machine/container replay remain open | whole route | open (external) |

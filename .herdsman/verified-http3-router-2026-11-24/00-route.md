@@ -62,3 +62,12 @@
   Those documents remain proposals with all proof evidence pending. The initial commit contains
   the planning artifacts. Current launch state is recorded by later `herdsman route log` entries.
 - 17:02 Phase 0 worktree and Herdr pane created; wrapper checks passed; launch checklist passed.
+- 17:04 Started Phase 0 implementer im-t-phase0 in pane w2:p2; Codex is working in the isolated branch worktree.
+- 17:07 Waiter smoke check returned TICK after 60 seconds; agent status is working and route health is clean.
+- 2026-11-24: user steered the Phase-0 implementer to CommandCode DeepSeek V4.1 Flash. It reran
+  the pinned offline build/test, the real valid/invalid Verus checks, the proof CI script, the
+  HTTP/3 demo, and the static checks documented in `reports/t-phase0.md` and the audit logs.
+- 2026-11-24: `claude-ds` was unavailable; the user authorized CommandCode plus Codex fallback.
+- 2026-11-24: independent GPT-6 Luna High Codex review found no P0/P1 code defects but returned
+  VERDICT FIX because hosted CI publication and an independent clean-machine/container replay
+  remain open. P1–P8 remain unclaimed.

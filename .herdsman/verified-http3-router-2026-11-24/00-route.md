@@ -71,3 +71,4 @@
 - 2026-11-24: independent GPT-6 Luna High Codex review found no P0/P1 code defects but returned
   VERDICT FIX because hosted CI publication and an independent clean-machine/container replay
   remain open. P1–P8 remain unclaimed.
+- 2026-11-24: clean Ubuntu 24.04 container replay passed on `e757847dfced9dab426e13f39d25d2a766033b16` (image digest `sha256:562111b88caa79c71391c0c4d3c2114a7d5c35915c20561fd893cb1e07929e6b`, snapshot `d7f01b9cf7e06b71a048e1c0bf19f8559247813bc74335cc0333dc9fc5e91b7e`; build/test/Verus+/−/proof-CI/HTTP3/fmt pass; log `clean-container-e757847.log`). Hosted CI/artifact publication is the only open Phase 0 acceptance blocker; P1–P8 remain unclaimed.

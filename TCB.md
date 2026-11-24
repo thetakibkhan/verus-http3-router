@@ -34,4 +34,4 @@ The count below is a tripwire, not evidence: exemptions: 0, all recorded: yes (v
 | Date | Assumption | Scope | Status |
 |---|---|---|---|
 | 2026-11-24 | Launch-time shell constraint; no build/test/Verus claim at that moment | whole route | superseded by the Phase 0 evidence in `.herdsman/verified-http3-router-2026-11-24/reports/t-phase0.md` |
-| 2026-11-24 | Phase 0 local checks ran with repo-pinned tools; hosted CI and an independent clean machine/container replay remain open | whole route | open (external) |
+| 2026-11-24 | Phase 0 local checks ran with repo-pinned tools; the clean Ubuntu 24.04 container replay passed on `e757847dfced9dab426e13f39d25d2a766033b16` (evidence: `reports/t-phase0-logs/clean-container-e757847.log`); hosted CI/artifact publication remains open | whole route | open (hosted CI only) |

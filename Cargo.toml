@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "crates/verified-router",
+    "crates/tquic-adapter",
+    "examples/http3-server",
+]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.100"
+publish = false

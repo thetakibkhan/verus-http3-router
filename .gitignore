@@ -95,3 +95,6 @@ node_modules/
 !proofs/**
 !tests/fixtures/**
 !benches/**
+
+# Phase 0 tool downloads and local demo certificates.
+/.phase0-tools/

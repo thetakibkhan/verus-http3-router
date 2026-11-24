@@ -1,0 +1,10 @@
+[package]
+name = "http3-server"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+# Published from d87a9a072475e381e64bfeb5732f2f505c2c28b7.
+tquic = { version = "=1.6.0", default-features = false, features = ["h3"] }

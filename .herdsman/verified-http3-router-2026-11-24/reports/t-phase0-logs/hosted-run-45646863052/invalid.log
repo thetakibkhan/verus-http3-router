@@ -1,0 +1,13 @@
+error: postcondition not satisfied
+ --> target/invalid-proof.u9PrMV/invalid.rs:6:17
+  |
+6 |         ensures result == value + 2,
+  |                 ^^^^^^^^^^^^^^^^^^^ failed this postcondition
+7 |     {
+8 |         value + 1
+  |         --------- at the end of the function body
+
+verification results:: 0 verified, 1 errors
+error: aborting due to 1 previous error
+
+invalid_exit=1

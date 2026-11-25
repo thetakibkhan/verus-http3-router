@@ -1,8 +1,24 @@
 # Router project .gitignore — local-only branches, no secrets in history.
 # Keeps source, specs, proofs, required fixtures, lockfiles, and repro configs tracked.
 
-# Local Herdsman plans, reports, and run state.
-.herdsman/
+# Ignore Herdsman runtime output by default, while allowing authored route
+# plans, reports, and the hosted Phase 0 proof artifact logs to be tracked.
+.herdsman/**
+!.herdsman/
+!.herdsman/verified-http3-router-2026-11-24/
+!.herdsman/verified-http3-router-2026-11-24/*.md
+!.herdsman/verified-http3-router-2026-11-24/reports/
+!.herdsman/verified-http3-router-2026-11-24/reports/*.md
+!.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/
+.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/*
+!.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/hosted-run-45646863052/
+.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/hosted-run-45646863052/*
+!.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/hosted-run-45646863052/versions.log
+!.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/hosted-run-45646863052/valid.log
+!.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/hosted-run-45646863052/invalid.log
+
+# Phase 1 reviews remain local until their phase is ready to publish.
+.herdsman/verified-http3-router-2026-11-24/reports/review-t-spec-*.md
 
 # --- Rust / Cargo ---
 /target/
@@ -101,3 +117,8 @@ node_modules/
 
 # Local CommandCode session state: generated permission settings and personal taste notes.
 /.commandcode/
+
+# Keep the three small logs that attest the hosted valid/invalid proof run.
+!.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/hosted-run-45646863052/versions.log
+!.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/hosted-run-45646863052/valid.log
+!.herdsman/verified-http3-router-2026-11-24/reports/t-phase0-logs/hosted-run-45646863052/invalid.log

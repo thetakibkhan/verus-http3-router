@@ -1,0 +1,18 @@
+Checked repository revision: eedcc026b4b3c450fe247df95e812e620473ee82
+cd36e39c297f2b1ade6b9215de392de1a96330669013138625c26f556933af13  proofs/toolchain-smoke.rs
+Pinned Verus revision: 1ce6a59bd72713cf486a7660097fe5ac57519617
+rustc 1.100.0 (0ef1bc386 2026-11-09)
+binary: rustc
+commit-hash: 0ef1bc386059596dada8fb65b50425aab2ea637a
+commit-date: 2026-11-09
+host: x86_64-unknown-linux-gnu
+release: 1.100.0
+LLVM version: 23.1.5
+cargo 1.100.0 (3acc79c0c 2026-11-05)
+Verus
+  Version: 0.2026.11.22.1ce6a59
+  Profile: release
+  Platform: linux_x86_64
+  Toolchain: 1.100.0-x86_64-unknown-linux-gnu (overridden by environment variable RUSTUP_TOOLCHAIN)
+
+Z3 version 4.16.0 - 64 bit
